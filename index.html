@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row mb-2">
+            <h1> <div data-splitting> Selamat Datang </div></h1>
+        </div>
+        <div class="row">
+            <h2> <div data-splitting> Bulan Ramadhan. </div> </h2>
+        </div>
+        <div class="row mt-5">
+            <h3> <div data-splitting> Marhaban ya Ramadhan </div> </h3>
+        </div>
+    </div>
+
+    <script src="js/splitting.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script>
+        Splitting()
+
+        var OBJ = 'h2 > div span';
+
+        var ntCh = OBJ.length;
+
+        // cos (index) => y
+        function curveY(i){
+            var n = i / ntCh * 6.24;
+            return (Math.cos(n)) * -200;
+        }
+        // cos (index) => X
+        function curveX(i){
+            var n = i / ntCh * 6.24;
+            return (Math.sin(n)) * -200;
+        }
+
+        // Timeline Baru
+        var tl = new TimelineMax({delay: 1.5, repeat: -1});
+
+        //  Warna untuk Array
+        var arr2 =["#041d30","#12293a","#041f33"];
+        var shadow = " 1px, 1px, 10px #000";
+        var font = 'Satisfy';
+        var font2 = 'Great Vibes';
+        var font3 = 'Italianno';
+        var background1 = 'https://media.giphy.com/media/Il9f7ZhytEiI0/giphy.gif';
+        // hruf zigzag
+
+        tl.staggerFrom(OBJ, 1, {
+            background: background1,
+            color : "white",
+            textShadow: shadow,
+            fontFamily: font,
+            cycle:{
+                y:curveY, 
+            },
+            x:-100, opacity:0
+        }, .02);
+
+        // huruf zipper
+
+        tl.staggerTo(OBJ, 3, {
+            fontFamily: font2,
+            cycle:{
+                y:[-80,80],
+                color: arr2, 
+                skewY:[20, -20],
+                skewX:[-20, 20],
+            },
+        }, .03, "+=1");
+
+        tl.staggerTo(OBJ ,2,{
+            fontFamily: font3,
+            cycle:{
+                x : curveX,
+                y : curveY,
+            },
+            color : "#c7ccc8"
+        }, .04, "+=1");
+
+        //  h1
+        var OBJ = 'h1 > div span';
+
+        var ntCh = OBJ.length;
+
+        // cos (index) => y
+        function curveY(i){
+            var n = i / ntCh * 6.24;
+            return (Math.cos(n)) * -200;
+        }
+        // cos (index) => X
+        function curveX(i){
+            var n = i / ntCh * 6.24;
+            return (Math.sin(n)) * -200;
+        }
+
+        // Timeline Baru
+        var tl = new TimelineMax({delay: 1, repeat: -1});
+
+        //  Warna untuk Array
+        var arr3 =  ["#041d30","#12293a","#041f33"];
+
+        // hruf zigzag
+
+        tl.staggerFrom(OBJ, 1, {
+            color : "white",
+            textShadow: shadow,
+            fontFamily: font,
+            cycle:{
+                y:curveY, 
+            },
+            x:-100, opacity:0
+        }, .02);
+
+        // huruf zipper
+
+        tl.staggerTo(OBJ, 3, {
+            fontFamily: font2,
+            cycle:{
+                y:[-80,80],
+                color: arr3, 
+                skewY:[20, -20],
+                skewX:[-20, 20],
+            },
+        }, .03, "+=1");
+
+        tl.staggerTo(OBJ ,2,{
+            fontFamily: font3,
+            cycle:{
+                x : curveX, 
+                y : curveY,
+            },
+            color : "#c7ccc8"
+        }, .04, "+=1");
+
+        // h3
+        var OBJ = 'h3 > div span';
+
+        var ntCh = OBJ.length;
+
+        // cos (index) => y
+        function curveY(i){
+            var n = i / ntCh * 6.24;
+            return (Math.cos(n)) * -200;
+        }
+        // cos (index) => X
+        function curveX(i){
+            var n = i / ntCh * 6.24;
+            return (Math.sin(n)) * -200;
+        }
+
+        // Timeline Baru
+        var tl = new TimelineMax({delay: 2, repeat: -1});
+
+        //  Warna untuk Array
+
+        var arr4 = ["#041d30","#12293a","#041f33"];
+
+        // hruf zigzag
+
+        tl.staggerFrom(OBJ, 1, {
+            fontFamily: font,
+            color : "white",
+            textShadow: shadow,
+            cycle:{
+                y:curveY, 
+            },
+            x:-100, opacity:0
+        }, .02);
+
+        // huruf zipper
+
+        tl.staggerTo(OBJ, 3, {
+            fontFamily: font2,
+            cycle:{
+                y:[-80,80],
+                color: arr4, 
+                skewY:[20, -20],
+                skewX:[-20, 20],
+            },
+        }, .03, "+=1");
+
+        tl.staggerTo(OBJ ,2,{
+            fontFamily: font3,
+            cycle:{
+                x : curveX,
+                y : curveY,
+            },
+            color : "#c7ccc8"
+        }, .04, "+=1");
+    </script>
+</body>
+</html>

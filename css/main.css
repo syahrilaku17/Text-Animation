@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Satisfy|Alfa+Slab+One|Great+Vibes|Italianno|Permanent+Marker|Satisfy|Tulpen+One');
+body{
+    background-image: url('../img/bg2.jpg') !important;
+    background-size: cover;
+    font-family: 'Italianno', cursive;
+}
+.container{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: inherit;
+    text-align: center;
+    
+}
+/* font-family: 'Italianno', cursive;
+font-family: 'Tulpen One', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Alfa Slab One', cursive; */
+h1{
+    font-size: 75px;
+    top: -80% !important;
+    text-align: center !important;
+    font-family: 'Italianno', cursive;
+}
+h2{
+    font-size: 150px;
+    font-family: 'Italianno', cursive;
+}
+h3{
+    font-size: 100px
+}
